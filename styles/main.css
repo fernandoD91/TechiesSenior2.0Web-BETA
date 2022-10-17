@@ -138,16 +138,17 @@ footer a,
 
 }
 .contenedorVideoYoutube{
-    width: min(100%, 800px);
+    width: min(100%, 600px);
 }
 .videoDivYoutube {
     position: relative;
     margin-left: auto;
     margin-right: auto;
 
-    padding-bottom: 75%;
-    /* padding-bottom: min(56.25%, 600px); */
-    width: min(100%, 800px);
+    padding-bottom: 90%;
+    /* padding-bottom: min(56.25%, 700px); */
+    /* padding-bottom: min(80%, 800px); */
+    width: min(100%, 600px);
     /* min-width: 100%; */
 }
 .videoYoutube {
@@ -159,7 +160,9 @@ footer a,
     width: 100%;
     height: 100%;
 }
-
+.contenedorGralTikTok{
+    /* padding: 1rem 0; */
+}
 .videoDivTikTok {
     /* position: relative; */
     /* margin-left: auto; */
@@ -242,7 +245,7 @@ h3 {
     width: max-content;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.651);
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     text-shadow: -2px 3px 2px rgba(255,255,255,1);
 }
 
