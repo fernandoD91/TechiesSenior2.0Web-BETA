@@ -1,0 +1,481 @@
+/* Reglas generales */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Bangers", cursive;
+    /* margin: 0; */
+    /* padding: 0; */
+    
+}
+/* --Margin 0-- */
+body,
+h1,
+h2,
+h3,
+h4,
+header p,
+footer,
+ul,p,
+#ulProductos,
+.margin-0 {
+    margin: 0;
+    padding: 0;
+}
+/* --Quitamos estilos-- */
+nav a,
+footer a,
+#ulRedes li{
+    text-decoration: none;
+}
+
+/* ----PRACTICA GRID PARA PRODUCTOS-------- */
+.grid {
+    display: grid;
+    /* grid-template-columns: 20% 20% 20% 20%; */
+    grid-template-columns: 30% 30% 30%;
+    gap: 0.5rem;
+    margin: auto 0;
+}
+
+[class*="producto"] {
+    border: 2px dashed #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+/*--------------------Barra de NAVEGACION-------------- */
+.logoMobile{
+    display: none;
+}
+.btn{
+    display: none;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.8rem;
+    background: #000;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.menu a {
+    font-size: min(calc(1.3vw) + 0.5rem, 1.5rem);
+    color: #ffffff;
+    position: relative;
+    bottom: 0.3rem;
+}
+.menu li:hover a {
+    color: rgb(0, 110, 255);
+    top: -0.3rem;
+    font-size: min(calc(2vw) + 0.7rem, 1.7rem);
+}
+.menu li .anchorSite::before{
+    content: url(../img/Techies_minimap_icon.webp);
+    /* padding-right: 0.2rem; */
+}
+#imgSocialNav{
+    max-width: 40px;
+}
+/* -------- --------- */
+/* Cabecera de pagina */
+/* -------- --------- */
+#header {
+    min-height: calc(100vh - 3.5rem);
+    font-size: min(calc(2.5vw + 0.5rem), 2.5rem);
+    color: #ffffff;
+    text-shadow: 0 0 min(1.5vw, 1.5rem) gold;
+    background-image: url(../img/techies-fb-portada.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 3.5rem;
+    /* background-attachment: fixed; */
+}
+
+.sinMiedo,
+.h1Header {
+    /* text-align: center; */
+    padding-top: 1.5rem;
+    padding-left: 5rem;
+}
+/* #ulNavRedes{
+    list-style: none;
+    text-align: center;
+    display: flex;
+}
+#ulNavRedes li{
+    display: inline-block;
+    text-indent: 2rem;
+}
+#imgSocialNav{
+    max-width: 50px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    /* max-height: 45px; 
+} */
+
+/* Contenido principal */
+/* -------------------------------------- */
+/* ------------ #NOVEDADES--------------- */
+/* -------------------------------------- */
+#novedades {
+    background-color: #245;
+    min-height: calc(100vh - 3.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    background-image: url(../img/multiverso-techisor.jpg);
+    /* background-repeat: no-repeat; */
+
+}
+.contenedorVideoYoutube{
+    width: min(100%, 800px);
+}
+.videoDivYoutube {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: 75%;
+    /* padding-bottom: min(56.25%, 600px); */
+    width: min(100%, 800px);
+    /* min-width: 100%; */
+}
+.videoYoutube {
+    padding-top: 2rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.videoDivTikTok {
+    /* position: relative; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* height: 535px; */
+    /* width: min(100%, 342px); */
+}
+.tiktok-embed{
+    border-radius: 10px;
+}
+.videoTikTok {
+    /* object-fit: cover; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 100%;  */
+}
+
+/* ----------------------------------------------- */
+/* ------------------- #PRODUCTOS --------------- */
+/* ---------------------------------------------- */
+#productos {
+    background-image: url(../img/techies-fb-portada2.jpg);
+    min-height: calc(100vh - 3.5rem);
+    background-repeat: no-repeat;
+    background-size:100% 101%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    /* margin: 0.5rem 0.5rem; */
+    text-align: center;
+}
+.parrafo{
+    text-align: center;
+    font-size: min(calc(2vw) + 0.5rem, 1.8rem);
+    padding: 1rem 0;
+    text-shadow: -1.5px 1.5px 0px rgba(255,255,255,1);
+}
+#ulProductos > li {
+    flex: 1 0 min(100%, 300px);
+    border-radius: 2rem;
+}
+li > img {
+    max-width: 100%;
+    height: min(50vh, 220px);
+    display: block;
+    margin: 0 auto;
+    border-radius: 2rem;
+    border: 0.15rem solid rgb(255, 0, 0);
+}
+
+/* ---------------------------------------------- */
+/*-------------- Acerca de mi ------------------- */
+/* ---------------------------------------------- */
+#acercademi {
+    background-color: grey;
+    background-image: 
+    url(../img/techies-milos.jpg),
+    url(../img/cesar-foto.jpg);
+    background-position: right,left;
+    /* background-size: contain, contain; */
+    background-size: 50% 100% , 50% 100%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 3.5rem);
+    padding-top: 3rem;
+}
+
+h2,
+h3 {
+    font-size: min(calc(2vw) + 0.5rem, 2rem);
+    box-shadow: -0.25rem 0.25rem 0.25rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.651);
+    padding: 0.25rem 0.5rem;
+    text-shadow: -2px 3px 2px rgba(255,255,255,1);
+}
+
+
+
+.ulAcercaDeMi {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.ulAcercaDeMi > .cardLi {
+    flex: 1 0 min(100%, 400px);
+}
+.titleLi {
+    display: block;
+    margin: -1rem -1rem 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.651);
+    border-bottom: 3px solid #000;
+    font-size: min(calc(1.5vw) + 0.5rem, 1.3rem);
+    
+}
+.cardLi {
+    font-size: min(calc(1.5vw) + 0.5rem, 1.6rem);
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    box-shadow: -0.25rem 0.25rem 0.25rem;
+    text-shadow: -2px 3px 2px rgba(255,255,255,1);
+}
+.cardLi strong{
+    font-size: min(calc(1.5vw) + 0.5rem, 1.5rem);
+    text-shadow: -2px 3px 0px rgba(255,255,255,1);
+}
+
+/* -----------FOOTER----------- */
+#footer {
+    padding: 5rem 1rem;
+    background: linear-gradient(#2455, #25c5);
+    min-height: calc(100vh - 3.5rem);
+    position: relative;
+}
+
+/* mapa */
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#ulRedes{
+    list-style: none;
+    text-align: center;
+    padding-top: 5rem;
+}
+#ulRedes li{
+    display: inline-block;
+    text-indent: 2rem;
+}
+#imgSocial{
+    max-width: 50px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    /* max-height: 45px; */
+}
+
+/* -----------Formulario de contacto-------------- */
+#contact {
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.2rem 0.1rem;
+    font-size: min(calc(2.5vw + 0.5rem), 1.5rem);
+}
+
+input,
+select,
+textarea,
+.btn-form {
+    outline: none;
+    border: 2px solid grey;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+}
+.valid {
+    max-height: 0;
+    overflow: hidden;
+    background: linear-gradient(hsla(60, 60%, 100%, 0.5), transparent);
+    border-radius: 1rem;
+}
+
+#contact button {
+    color: #eee;
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem;
+    background-color: transparent;
+    padding: 0.5rem 3rem;
+    background: url(../img/IconTechies_Proxi.webp) center/contain round;
+}
+
+.copy{
+    text-align: center;
+    font-size: min(calc(1.5vw + 0.5rem), 2rem);
+    padding: 2rem ;
+}
+
+/* ------------------------------------------------ */
+/*---------------"  Validacion Visual"------------- */
+#contact :focus {
+    box-shadow: 0 0 0.2rem #eee;
+}
+
+:focus + .valid {
+    padding: 0.3rem 0.3rem 2rem;
+    max-height: 600px;
+}
+:is(textarea, input):valid {
+    border-color: #3e4;
+}
+
+:is(textarea, input):not(:placeholder-shown):invalid:focus {
+    border-color: red;
+}
+
+#contact button:hover {
+    background-color: rgb(255, 0, 0);
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+
+
+/* ------------------------------------- */
+/* ---------Pantalla Medianas------------*/
+/* ------------------------------------- */
+/* ---------Menu hambuguesa------------- */
+@media screen and (max-width: 768px){
+
+.logoMobile{
+    display: inline;
+    color: #eee;
+}
+.btn{
+    display: block;
+    padding: .3rem .5rem;
+    color: #000000;
+    /* border: 1px solid rgb(255, 0, 0); */
+    border-radius: .4rem;
+    /* background-color: rgb(0, 221, 255); */
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    background-color: #000000;
+}
+.menu{
+    position: static;
+    display: block;
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0.2rem;
+}
+.menu.active{
+    max-height: 100vh;
+} 
+#liRedes{
+    display: inline;
+    padding: 0 0.8rem;
+}
+.open{
+    border: 1px solid rgb(0, 106, 255);
+    /* padding: 0.3rem 0.5rem; */
+}
+.open::before{
+    content: '\2630';
+}
+.close{
+    border: 1px solid rgb(255, 0, 0);
+}
+.close::before{
+    content: '\274C';
+}
+
+/* -------- --------- */
+/* Cabecera de pagina */
+/* -------- --------- */
+#header{
+    font-size: min(calc(1.5vw + 0.5rem), 2.5rem);
+    margin: 0;
+    background-size: 100% 100%;
+    min-height: 35vh;
+}
+.sinMiedo,
+.h1Header {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0.5rem;
+}
+
+/* ----------------------------------------------- */
+/* ------------------- #PRODUCTOS --------------- */
+/* ---------------------------------------------- */
+#productos{
+    background-repeat: repeat;
+    background-size: 100% 33.3%;
+
+}
+
+/* ---------------------------------------------- */
+/*-------------- Acerca de mi ------------------- */
+/* ---------------------------------------------- */
+#acercademi{
+    background-position: top,bottom;
+    background-size: 100%;
+    background-size: 100% 50% , 100% 50%;
+}
+
+}
